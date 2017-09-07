@@ -15,8 +15,8 @@
 		2283912B1F5931C9000C4692 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 228391291F5931C9000C4692 /* LaunchScreen.storyboard */; };
 		228391361F5931CA000C4692 /* CFiNativeSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228391351F5931CA000C4692 /* CFiNativeSampleTests.swift */; };
 		228391411F5931CA000C4692 /* CFiNativeSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228391401F5931CA000C4692 /* CFiNativeSampleUITests.swift */; };
-		228391501F593250000C4692 /* iMFAD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2283914F1F593250000C4692 /* iMFAD.framework */; };
-		228391511F593250000C4692 /* iMFAD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2283914F1F593250000C4692 /* iMFAD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		228391A91F613100000C4692 /* iMFAD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 228391A81F613100000C4692 /* iMFAD.framework */; };
+		228391AA1F613100000C4692 /* iMFAD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 228391A81F613100000C4692 /* iMFAD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +43,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				228391511F593250000C4692 /* iMFAD.framework in Embed Frameworks */,
+				228391AA1F613100000C4692 /* iMFAD.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,7 +66,7 @@
 		228391401F5931CA000C4692 /* CFiNativeSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CFiNativeSampleUITests.swift; sourceTree = "<group>"; };
 		228391421F5931CA000C4692 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2283914E1F593226000C4692 /* CFiNativeSample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CFiNativeSample-Bridging-Header.h"; sourceTree = "<group>"; };
-		2283914F1F593250000C4692 /* iMFAD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iMFAD.framework; sourceTree = "<group>"; };
+		228391A81F613100000C4692 /* iMFAD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iMFAD.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				228391501F593250000C4692 /* iMFAD.framework in Frameworks */,
+				228391A91F613100000C4692 /* iMFAD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +98,7 @@
 		228391111F5931C9000C4692 = {
 			isa = PBXGroup;
 			children = (
-				2283914F1F593250000C4692 /* iMFAD.framework */,
+				228391A81F613100000C4692 /* iMFAD.framework */,
 				2283911C1F5931C9000C4692 /* CFiNativeSample */,
 				228391341F5931CA000C4692 /* CFiNativeSampleTests */,
 				2283913F1F5931CA000C4692 /* CFiNativeSampleUITests */,
@@ -441,6 +441,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -463,6 +464,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -553,6 +555,7 @@
 				228391471F5931CA000C4692 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		228391481F5931CA000C4692 /* Build configuration list for PBXNativeTarget "CFiNativeSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -561,6 +564,7 @@
 				2283914A1F5931CA000C4692 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2283914B1F5931CA000C4692 /* Build configuration list for PBXNativeTarget "CFiNativeSampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -569,6 +573,7 @@
 				2283914D1F5931CA000C4692 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

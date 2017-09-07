@@ -73,15 +73,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy, readonly, nullable) NSString *fb_CallToAction;
 
-@property (nonatomic, strong, readonly, nullable) UIImage *fb_Icon;
+@property (nonatomic, strong, readonly, nullable) NSURL *fb_IconURL;
 
-@property (nonatomic, strong, readonly, nullable) UIImage *fb_CoverImage;
+@property (nonatomic, strong, readonly, nullable) NSURL *fb_CoverImageURL;
 
 @property (nonatomic, copy, readonly, nullable) NSString *fb_RawBody;
 
 @property (nonatomic, copy, readonly, nullable) NSString *fb_body;
 
-@property (nonatomic, strong, readonly, nullable) UIImage *fb_AdChoicesIcon;
+@property (nonatomic, strong, readonly, nullable) NSURL *fb_AdChoicesIconURL;
 
 @property (nonatomic, copy, readonly, nullable) NSURL *fb_AdChoicesLinkURL;
 

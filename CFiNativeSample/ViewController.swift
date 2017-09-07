@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         self.native = MFNativeAd();
-        self.native?.bannerId = "5229";
+        self.native?.bannerId = "5236";
         self.native?.delegate = self;
         self.native?.request();
         
@@ -64,7 +64,15 @@ extension ViewController:MFNativeDelegate{
         self.adBody.text = nativeAd.fb_body;
         self.advertiser.text = "Sponsored";
         self.adButtonText.setTitle(nativeAd.fb_CallToAction, for: .normal);
-        self.coverImage.image = nativeAd.fb_Icon;
+
+        let data = try? Data(contentsOf: nativeAd.fb_CoverImageURL!)
+        
+        if let imageData = data {
+            let image = UIImage(data: data!)
+            self.coverImage.image = image;
+        }
+
+        
         nativeAd.setFBAdClick(self.adView, controller: self);
     }
     
