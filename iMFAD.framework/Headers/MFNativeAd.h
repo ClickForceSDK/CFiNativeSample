@@ -95,6 +95,9 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark 設定是否輸出除錯訊息
 - (void)debugInfo:(BOOL)state;
 
+#pragma mark 回傳SDK版本
++ (NSString *)version;
+
 #pragma mark The whole area of the UIView will be clickable.
 - (void)registerViewForInteraction:(UIView *_Nullable)view
                 withViewController:(nullable UIViewController *)viewController;

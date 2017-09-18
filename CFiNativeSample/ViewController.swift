@@ -34,7 +34,6 @@ class ViewController: UIViewController {
         let color = UIColor.black;
         self.adView.layer.borderColor = color.cgColor;
         self.adView.layer.borderWidth = 1.0;
-        
     }
 
     override func didReceiveMemoryWarning() {
