@@ -18,5 +18,6 @@ FOUNDATION_EXPORT const unsigned char iMFADVersionString[];
 #import "MFBannerView.h"
 #import "MFInterstitialView.h"
 #import "MFNativeAd.h"
+#import "MFMediaView.h"
 
 

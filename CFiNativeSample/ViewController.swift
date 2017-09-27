@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet var adBody: UILabel!
     @IBOutlet var advertiser: UILabel!
     @IBOutlet var adButtonText: UIButton!
+    @IBOutlet var mediaView: MFMediaView!
     
     private var native :MFNativeAd?
     
@@ -71,7 +72,7 @@ extension ViewController:MFNativeDelegate{
             self.coverImage.image = image;
         }
 
-        
+        self.mediaView.setMediaView(nativeAd.getFBNativeObj());
         nativeAd.setFBAdClick(self.adView, controller: self);
     }
     
