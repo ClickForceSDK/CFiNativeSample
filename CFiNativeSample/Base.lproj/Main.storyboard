@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -73,10 +72,6 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dc3-3f-qDx" customClass="MFMediaView">
-                                <rect key="frame" x="28" y="333" width="320" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Facebook MediaView" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhz-4S-GWE">
                                 <rect key="frame" x="28" y="304" width="173" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -86,12 +81,6 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="dc3-3f-qDx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="313" id="0cW-2c-jRd"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dc3-3f-qDx" secondAttribute="bottom" constant="206" id="PfL-Np-xvr"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="dc3-3f-qDx" secondAttribute="trailing" constant="11" id="RM3-HP-zqS"/>
-                            <constraint firstItem="dc3-3f-qDx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="12" id="i00-S6-Bu1"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="adBody" destination="sk9-y7-uhg" id="mhx-Ns-QAb"/>
@@ -100,7 +89,6 @@
                         <outlet property="adView" destination="qX5-bH-LmV" id="iBr-0x-LTt"/>
                         <outlet property="advertiser" destination="kDU-Op-21W" id="AHr-dR-EVX"/>
                         <outlet property="coverImage" destination="ERS-i5-CG3" id="iso-xo-zRM"/>
-                        <outlet property="mediaView" destination="dc3-3f-qDx" id="c2C-uQ-ZJM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

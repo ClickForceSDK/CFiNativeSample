@@ -39,13 +39,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)onFBNativeADFailWithError:(NSError *)error;
 
+- (void)onFBNativeMediaViewFail;
+
 
 @end
 
 @interface MFNativeAd : NSObject
 
 @property (nonatomic, copy) NSString * _Nullable bannerId;
-
+@property CGRect mediaViewFram;
 
 /**
  ClickForce Native Ad
@@ -89,14 +91,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy, readonly, nonnull) NSString *fb_PlacementID;
 
+@property  (nonatomic,strong,readonly, nullable) UIView *fb_MediaView;
+
 #pragma mark 開始取得廣告
 - (void)requestAd;
 
 #pragma mark 設定是否輸出除錯訊息
 - (void)debugInfo:(BOOL)state;
-
-#pragma mark 取得 FB原生物件
-- (NSObject *)getFBNativeObj;
 
 #pragma mark 回傳SDK版本
 + (NSString *)version;

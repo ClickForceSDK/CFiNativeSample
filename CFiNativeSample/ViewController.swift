@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet var adBody: UILabel!
     @IBOutlet var advertiser: UILabel!
     @IBOutlet var adButtonText: UIButton!
-    @IBOutlet var mediaView: MFMediaView!
+
     
     private var native :MFNativeAd?
     
@@ -30,6 +30,7 @@ class ViewController: UIViewController {
         self.native = MFNativeAd();
         self.native?.bannerId = "5236";
         self.native?.delegate = self;
+        self.native?.mediaViewFram = CGRect(x: 28, y: 333, width: 320, height: 160);
         self.native?.request();
         
         let color = UIColor.black;
@@ -72,7 +73,7 @@ extension ViewController:MFNativeDelegate{
             self.coverImage.image = image;
         }
 
-        self.mediaView.setMediaView(nativeAd.getFBNativeObj());
+        self.view.addSubview(nativeAd.fb_MediaView!);
         nativeAd.setFBAdClick(self.adView, controller: self);
     }
     
