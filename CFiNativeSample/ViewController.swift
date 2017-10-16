@@ -31,6 +31,7 @@ class ViewController: UIViewController {
         self.native?.bannerId = "5236";
         self.native?.delegate = self;
         self.native?.mediaViewFram = CGRect(x: 28, y: 333, width: 320, height: 160);
+        self.native?.adChoicesViewFram = CGRect(x: 310, y: 0, width: 20, height: 20);
         self.native?.request();
         
         let color = UIColor.black;
@@ -74,6 +75,7 @@ extension ViewController:MFNativeDelegate{
         }
 
         self.view.addSubview(nativeAd.fb_MediaView!);
+        self.adView.addSubview(nativeAd.fb_AdChoicesView!);
         nativeAd.setFBAdClick(self.adView, controller: self);
     }
     

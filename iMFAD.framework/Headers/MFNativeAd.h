@@ -48,6 +48,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy) NSString * _Nullable bannerId;
 @property CGRect mediaViewFram;
+@property CGRect adChoicesViewFram;
 
 /**
  ClickForce Native Ad
@@ -92,6 +93,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, readonly, nonnull) NSString *fb_PlacementID;
 
 @property  (nonatomic,strong,readonly, nullable) UIView *fb_MediaView;
+
+@property (nonatomic,strong,readonly,nullable) UIView *fb_AdChoicesView;
 
 #pragma mark 開始取得廣告
 - (void)requestAd;
