@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2272726D1FAFFD6F0069099B /* iMFAD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2272726C1FAFFD6F0069099B /* iMFAD.framework */; };
-		2272726E1FAFFD6F0069099B /* iMFAD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2272726C1FAFFD6F0069099B /* iMFAD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		227B8F811FE0D8F5006F6EE5 /* iMFAD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 227B8F801FE0D8F5006F6EE5 /* iMFAD.framework */; };
+		227B8F821FE0D8F5006F6EE5 /* iMFAD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 227B8F801FE0D8F5006F6EE5 /* iMFAD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2283911E1F5931C9000C4692 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2283911D1F5931C9000C4692 /* AppDelegate.swift */; };
 		228391201F5931C9000C4692 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2283911F1F5931C9000C4692 /* ViewController.swift */; };
 		228391231F5931C9000C4692 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 228391211F5931C9000C4692 /* Main.storyboard */; };
@@ -43,7 +43,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2272726E1FAFFD6F0069099B /* iMFAD.framework in Embed Frameworks */,
+				227B8F821FE0D8F5006F6EE5 /* iMFAD.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,7 +51,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2272726C1FAFFD6F0069099B /* iMFAD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iMFAD.framework; sourceTree = "<group>"; };
+		227B8F801FE0D8F5006F6EE5 /* iMFAD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iMFAD.framework; sourceTree = "<group>"; };
 		2283911A1F5931C9000C4692 /* CFiNativeSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CFiNativeSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2283911D1F5931C9000C4692 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2283911F1F5931C9000C4692 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2272726D1FAFFD6F0069099B /* iMFAD.framework in Frameworks */,
+				227B8F811FE0D8F5006F6EE5 /* iMFAD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +98,7 @@
 		228391111F5931C9000C4692 = {
 			isa = PBXGroup;
 			children = (
-				2272726C1FAFFD6F0069099B /* iMFAD.framework */,
+				227B8F801FE0D8F5006F6EE5 /* iMFAD.framework */,
 				2283911C1F5931C9000C4692 /* CFiNativeSample */,
 				228391341F5931CA000C4692 /* CFiNativeSampleTests */,
 				2283913F1F5931CA000C4692 /* CFiNativeSampleUITests */,
@@ -218,7 +218,6 @@
 				TargetAttributes = {
 					228391191F5931C9000C4692 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 8Q3LY5VL5Q;
 						ProvisioningStyle = Automatic;
 					};
 					228391301F5931CA000C4692 = {
@@ -442,7 +441,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 8Q3LY5VL5Q;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -465,7 +464,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 8Q3LY5VL5Q;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

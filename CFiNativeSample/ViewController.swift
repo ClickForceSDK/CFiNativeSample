@@ -83,5 +83,12 @@ extension ViewController:MFNativeDelegate{
         
         print("Native ad failed to load with error: %@", error);
     }
+    
+    func onFBNativeErrorException(_ e: NSException) {
+       
+    }
+    func requestAdFail() {
+        print("No Ad");
+    }
 }
 
