@@ -37,11 +37,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)onFBNativeAdWillLogImpression;
 
-- (void)onFBNativeADFailWithError:(NSError *)error;
+- (void)onFBNativeADFailWithError;
 
-- (void)onFBNativeMediaViewFail;
-
-- (void)onFBNativeErrorException:(NSException *)e;
 
 
 @end

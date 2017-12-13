@@ -79,14 +79,13 @@ extension ViewController:MFNativeDelegate{
         nativeAd.setFBAdClick(self.adView, controller: self);
     }
     
-    func onFBNativeADFailWithError(_ error: Error) {
+    func onFBNativeADFailWithError() {
         
-        print("Native ad failed to load with error: %@", error);
+   
+        
+        print("Native ad failed to load with error: %@");
     }
     
-    func onFBNativeErrorException(_ e: NSException) {
-       
-    }
     func requestAdFail() {
         print("No Ad");
     }
