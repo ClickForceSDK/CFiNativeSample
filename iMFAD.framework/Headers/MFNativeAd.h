@@ -104,6 +104,8 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark 回傳SDK版本
 + (NSString *)version;
 
++ (NSString *)fbSDKVersion;
+
 #pragma mark The whole area of the UIView will be clickable.
 - (void)registerViewForInteraction:(UIView *_Nullable)view
                 withViewController:(nullable UIViewController *)viewController;

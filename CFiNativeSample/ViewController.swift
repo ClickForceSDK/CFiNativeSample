@@ -28,12 +28,11 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         self.native = MFNativeAd();
-        self.native?.bannerId = "5236";
+        self.native?.bannerId = "7619";
         self.native?.delegate = self;
         self.native?.mediaViewFram = CGRect(x: 28, y: 333, width: 320, height: 160);
         self.native?.adChoicesViewFram = CGRect(x: 310, y: 0, width: 20, height: 20);
         self.native?.request();
-        
         let color = UIColor.black;
         self.adView.layer.borderColor = color.cgColor;
         self.adView.layer.borderWidth = 1.0;
