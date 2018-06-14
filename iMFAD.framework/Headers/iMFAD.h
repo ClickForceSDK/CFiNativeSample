@@ -17,7 +17,7 @@ FOUNDATION_EXPORT const unsigned char iMFADVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <iMFAD/PublicHeader.h>
 #import "MFNativeAd.h"
 
-#define ClickForce_AD_SDK_VERSION @"1.1.0"
+#define ClickForce_AD_SDK_VERSION @"1.1.1"
 
 
 

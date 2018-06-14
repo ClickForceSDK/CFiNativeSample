@@ -112,6 +112,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)setFBAdClick:(UIView *)fbAdView controller:(UIViewController *)fbAdViewController;
 
+- (void)unregisterView;
+
 @end
 
 
