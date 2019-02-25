@@ -47,6 +47,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy) NSString * _Nullable bannerId;
 @property CGRect mediaViewFram;
+@property CGRect iconViewFram;
 @property CGRect adChoicesViewFram;
 
 /**
@@ -69,7 +70,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, copy, readonly, nullable) NSString *fb_Title;
 
-@property (nonatomic, copy, readonly, nullable) NSString *fb_Subtitle;
+@property (nonatomic, copy, readonly, nullable) NSString *fb_linkDescription;
+
+@property (nonatomic, copy, readonly, nullable) NSString *fb_advertiserName;
 
 @property (nonatomic, copy, readonly, nullable) NSString *fb_SocialContext;
 
@@ -77,21 +80,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong, readonly, nullable) NSURL *fb_IconURL;
 
-@property (nonatomic, strong, readonly, nullable) NSURL *fb_CoverImageURL;
-
 @property (nonatomic, copy, readonly, nullable) NSString *fb_RawBody;
 
 @property (nonatomic, copy, readonly, nullable) NSString *fb_body;
 
-@property (nonatomic, strong, readonly, nullable) NSURL *fb_AdChoicesIconURL;
-
-@property (nonatomic, copy, readonly, nullable) NSURL *fb_AdChoicesLinkURL;
-
-@property (nonatomic, copy, readonly, nullable) NSString *fb_AdChoicesText;
+@property (nonatomic, copy, readonly, nullable) NSString *fb_sponsoredTranslation;
 
 @property (nonatomic, copy, readonly, nonnull) NSString *fb_PlacementID;
 
 @property  (nonatomic,strong,readonly, nullable) UIView *fb_MediaView;
+
+@property (nonatomic,strong,readonly ,nullable) UIView *fb_IconView;
 
 @property (nonatomic,strong,readonly,nullable) UIView *fb_AdChoicesView;
 
@@ -107,12 +106,15 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *)fbSDKVersion;
 
 #pragma mark The whole area of the UIView will be clickable.
-- (void)registerViewForInteraction:(UIView *_Nullable)view
-                withViewController:(nullable UIViewController *)viewController;
+- (void)registerElementsView:(UIView *)elementsView clickView:(NSArray<UIView *> *)view controllervw:(UIViewController *)viewController;
 
-- (void)setFBAdClick:(UIView *)fbAdView controller:(UIViewController *)fbAdViewController;
+- (void)setFBElements:(UIView *)fbAdView mediaView:(UIView *)fbmedia iconView:(UIView *)fbicon controller:(UIViewController *)fbAdViewController clickableViews:(NSArray<UIView *> *)cViews;
+
+- (void)setFBElements:(UIView *)fbAdView iconView:(UIView *)fbicon controller:(UIViewController *)fbAdViewController clickableViews:(NSArray<UIView *> *)cViews;
 
 - (void)unregisterView;
+
+- (void)setScrollviewName:(UIView *)uscro;
 
 @end
 

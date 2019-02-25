@@ -28,10 +28,11 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         self.native = MFNativeAd();
-        self.native?.bannerId = "7619";
+        self.native?.bannerId = "8384";
         self.native?.delegate = self;
         self.native?.mediaViewFram = CGRect(x: 28, y: 333, width: 320, height: 160);
-        self.native?.adChoicesViewFram = CGRect(x: 310, y: 0, width: 20, height: 20);
+        self.native?.iconViewFram = CGRect(x: 8, y: 10, width: 120, height: 76);
+        self.native?.adChoicesViewFram = CGRect(x: 340, y: 0, width: 20, height: 20);
         self.native?.request();
         let color = UIColor.black;
         self.adView.layer.borderColor = color.cgColor;
@@ -49,7 +50,6 @@ extension ViewController:MFNativeDelegate{
     
     func onMFNativeAdDidLoad(_ nativeAd: MFNativeAd) {
 
-        nativeAd.registerView(forInteraction: self.adView, with: self);
         self.adTitle.text = nativeAd.title;
         self.adBody.text = nativeAd.content;
         self.adButtonText.setTitle(nativeAd.buttonTitle, for: .normal);
@@ -57,25 +57,20 @@ extension ViewController:MFNativeDelegate{
         nativeAd.coverImg?.loadAsync(block: { image in
             self.coverImage.image = image;
         })
+        nativeAd.registerElementsView(self.adView, clickView: [self.adButtonText,self.adBody,self.adTitle,self.coverImage], controllervw: self);
+        print(MFNativeAd.version());
     }
     
     func onFBNativeAdDidLoad(_ nativeAd: MFNativeAd) {
 
         self.adTitle.text = nativeAd.fb_Title;
         self.adBody.text = nativeAd.fb_body;
-        self.advertiser.text = "Sponsored";
+        self.advertiser.text = nativeAd.fb_advertiserName;
         self.adButtonText.setTitle(nativeAd.fb_CallToAction, for: .normal);
-
-        let data = try? Data(contentsOf: nativeAd.fb_CoverImageURL!)
-        
-        if let imageData = data {
-            let image = UIImage(data: data!)
-            self.coverImage.image = image;
-        }
-
         self.view.addSubview(nativeAd.fb_MediaView!);
+        self.adView.addSubview(nativeAd.fb_IconView!);
         self.adView.addSubview(nativeAd.fb_AdChoicesView!);
-        nativeAd.setFBAdClick(self.adView, controller: self);
+        nativeAd.setFBElements(self.adView, mediaView: nativeAd.fb_MediaView!, iconView: nativeAd.fb_IconView!, controller: self, clickableViews: [nativeAd.fb_IconView!,self.adButtonText]);
     }
     
     func onFBNativeADFailWithError() {
