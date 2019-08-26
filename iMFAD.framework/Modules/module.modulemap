@@ -1,6 +1,0 @@
-framework module iMFAD {
-  umbrella header "iMFAD.h"
-
-  export *
-  module * { export * }
-}

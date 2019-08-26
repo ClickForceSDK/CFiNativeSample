@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         self.native = MFNativeAd();
-        self.native?.bannerId = "8384";
+        self.native?.bannerId = "5559";
         self.native?.delegate = self;
         self.native?.mediaViewFram = CGRect(x: 28, y: 333, width: 320, height: 160);
         self.native?.iconViewFram = CGRect(x: 8, y: 10, width: 120, height: 76);
@@ -71,6 +71,8 @@ extension ViewController:MFNativeDelegate{
         self.adView.addSubview(nativeAd.fb_IconView!);
         self.adView.addSubview(nativeAd.fb_AdChoicesView!);
         nativeAd.setFBElements(self.adView, mediaView: nativeAd.fb_MediaView!, iconView: nativeAd.fb_IconView!, controller: self, clickableViews: [nativeAd.fb_IconView!,self.adButtonText]);
+        
+        
     }
     
     func onFBNativeADFailWithError() {

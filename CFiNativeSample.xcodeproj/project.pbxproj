@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		223D037F20D253B700AE3AF3 /* iMFAD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 223D037E20D253B700AE3AF3 /* iMFAD.framework */; };
-		223D038020D253B700AE3AF3 /* iMFAD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 223D037E20D253B700AE3AF3 /* iMFAD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2283911E1F5931C9000C4692 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2283911D1F5931C9000C4692 /* AppDelegate.swift */; };
 		228391201F5931C9000C4692 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2283911F1F5931C9000C4692 /* ViewController.swift */; };
 		228391231F5931C9000C4692 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 228391211F5931C9000C4692 /* Main.storyboard */; };
@@ -17,6 +15,8 @@
 		2283912B1F5931C9000C4692 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 228391291F5931C9000C4692 /* LaunchScreen.storyboard */; };
 		228391361F5931CA000C4692 /* CFiNativeSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228391351F5931CA000C4692 /* CFiNativeSampleTests.swift */; };
 		228391411F5931CA000C4692 /* CFiNativeSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228391401F5931CA000C4692 /* CFiNativeSampleUITests.swift */; };
+		48B0F0CE2224F1BE007ED068 /* iMFAD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48B0F0CC2224F1B1007ED068 /* iMFAD.framework */; };
+		48B0F0CF2224F1BE007ED068 /* iMFAD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 48B0F0CC2224F1B1007ED068 /* iMFAD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +43,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				223D038020D253B700AE3AF3 /* iMFAD.framework in Embed Frameworks */,
+				48B0F0CF2224F1BE007ED068 /* iMFAD.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,7 +51,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		223D037E20D253B700AE3AF3 /* iMFAD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iMFAD.framework; sourceTree = "<group>"; };
 		2283911A1F5931C9000C4692 /* CFiNativeSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CFiNativeSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2283911D1F5931C9000C4692 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2283911F1F5931C9000C4692 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +66,7 @@
 		228391401F5931CA000C4692 /* CFiNativeSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CFiNativeSampleUITests.swift; sourceTree = "<group>"; };
 		228391421F5931CA000C4692 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2283914E1F593226000C4692 /* CFiNativeSample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CFiNativeSample-Bridging-Header.h"; sourceTree = "<group>"; };
+		48B0F0CC2224F1B1007ED068 /* iMFAD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iMFAD.framework; path = CFiNativeSample/iMFAD.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				223D037F20D253B700AE3AF3 /* iMFAD.framework in Frameworks */,
+				48B0F0CE2224F1BE007ED068 /* iMFAD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +98,7 @@
 		228391111F5931C9000C4692 = {
 			isa = PBXGroup;
 			children = (
-				223D037E20D253B700AE3AF3 /* iMFAD.framework */,
+				48B0F0CC2224F1B1007ED068 /* iMFAD.framework */,
 				2283911C1F5931C9000C4692 /* CFiNativeSample */,
 				228391341F5931CA000C4692 /* CFiNativeSampleTests */,
 				2283913F1F5931CA000C4692 /* CFiNativeSampleUITests */,
@@ -446,6 +446,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/CFiNativeSample",
 				);
 				INFOPLIST_FILE = CFiNativeSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -469,6 +470,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/CFiNativeSample",
 				);
 				INFOPLIST_FILE = CFiNativeSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
