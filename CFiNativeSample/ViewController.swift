@@ -71,7 +71,7 @@ extension ViewController:MFNativeDelegate{
         self.adView.addSubview(nativeAd.fb_IconView!);
         self.adView.addSubview(nativeAd.fb_AdChoicesView!);
         nativeAd.setFBElements(self.adView, mediaView: nativeAd.fb_MediaView!, iconView: nativeAd.fb_IconView!, controller: self, clickableViews: [nativeAd.fb_IconView!,self.adButtonText]);
-        
+        print(MFNativeAd.fbSDKVersion());
         
     }
     
